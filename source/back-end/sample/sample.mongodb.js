@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const IbmCloudSecretsManagerApiV1 =  require('@ibm-cloud/secrets-manager/secrets-manager/v1');
+const IbmCloudSecretsManagerApiV2 =  require('@ibm-cloud/secrets-manager/secrets-manager/v2');
 const { IamAuthenticator } = require('@ibm-cloud/secrets-manager/auth');
 
 const mongoose = require('mongoose');
@@ -15,22 +15,21 @@ mongoose.set('bufferCommands', false);
 const create_connection = async () => {
     try {
         // Create a Secrets Manager client instance
-        const secretsManagerService = new IbmCloudSecretsManagerApiV1({
-            authenticator: new IamAuthenticator({
-                apikey: process.env.SECRET_MANAGER_APIKEY,
-            }),
-            serviceUrl: process.env.SECRET_MANAGER_URL
+        const secretsManagerService = new IbmCloudSecretsManagerApiV2({
+        authenticator: new IamAuthenticator({
+            apikey: process.env.SECRET_MANAGER_APIKEY,
+        }),
+        serviceUrl: process.env.SECRET_MANAGER_URL,
         });
 
         // Get the mongodb certificate from Secrets Manager Service
         let cert = await secretsManagerService.getSecret({
-            secretType: 'imported_cert',
             id: process.env.SECRET_MANAGER_CERT_ID,
         });
         
         // Create an auxiliary certificate file for the mongoose connection
         const cert_name = './certificate.pem';
-        fs.writeFileSync(cert_name, cert.result.resources[0].secret_data.certificate, (err) => {if (err) throw err;});
+        fs.writeFileSync(cert_name, cert.result.certificate, (err) => {if (err) throw err;});
         
         // Connect to the mongodb database
         await mongoose.connect(
@@ -44,7 +43,7 @@ const create_connection = async () => {
         
         // Store connection
         let db = mongoose.connection;
-        
+
         // Check connection status
         // Values are: 
         //  0: disconnected

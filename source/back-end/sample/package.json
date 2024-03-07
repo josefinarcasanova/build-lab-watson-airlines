@@ -9,7 +9,7 @@
   "author": "josefinarcasanova",
   "license": "ISC",
   "dependencies": {
-    "@ibm-cloud/secrets-manager": "^1.0.43",
+    "@ibm-cloud/secrets-manager": "^2.0.3",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "ibm-cloud-databases": "^0.1.0",

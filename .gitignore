@@ -1,0 +1,7 @@
+# nodejs dependencies
+node_modules/
+# macos files
+.DS_store
+# environment variables
+.env
+.venv
