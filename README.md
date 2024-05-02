@@ -24,7 +24,7 @@
     - [5.4. OpenAPI specification generation](#54-openapi-specification-generation)
       - [5.4.1. What is OpenAPI?](#541-what-is-openapi)
       - [5.4.2. Generating the specification](#542-generating-the-specification)
-  - [6. Project Delivery](#6-project-delivery)
+  - [6. Solution Delivery](#6-solution-delivery)
     - [6.1. Deliverables](#61-deliverables)
     - [6.2. Focal Points](#62-focal-points)
   - [References](#references)
@@ -34,7 +34,7 @@
 
 ### 1.1. About Watson Airlines
 
-Watson Airlines is a one of the largest airlines in America. With over 30 years of history, we connect people to opportunities while expanding the understanding of our planet and the people within it. We offer our one-of-a-kind value and Hospitality at over 50 airports across more than 15 countries. In addition, we are members of the [International Air Transport Association (IATA)](https://www.iata.org/en/about/), a trade association that represents over 300 airlines, equivalent to about 83% of total air traffic. This allows us to operate safely, securely, efficiently, and economically under clearly defined rules.
+Watson Airlines is a one of the largest airlines in North America. With over 30 years of history, we connect people to opportunities while expanding the understanding of our planet and the people within it. We offer our one-of-a-kind value and Hospitality at over 50 airports across more than 15 countries. In addition, we are members of the [International Air Transport Association (IATA)](https://www.iata.org/en/about/), a trade association that represents over 300 airlines, equivalent to about 83% of total air traffic. This allows us to operate safely, securely, efficiently, and economically under clearly defined rules.
 
 We are pioneers in the usage of technology, and actively advocate for its usage to improve our customer's experience.
 
@@ -89,9 +89,10 @@ Watson Airlines requires the virtual assistant be able to answer the following q
 ### 2.4. Implementation Considerations
 
 - While JavaScript/NodeJS is the preferred programming language, any might be used for developing both the REST API and Web Application.
-- Virtual Assistant language might be either English or Spanish.
+- Virtual Assistant language **must be** English.
+- In order to meet the aviation industry's Safety Quality and Compliance requirements, it is **imperative** for Watson Airline's solutions to meet the [best development standards](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist) and practices for security and scalability.
 - Environment variables established in [this document](#41-environment-variables) must be respected. However, additional ones might be defined if deemed necessary.
-- Access credentials to both the Database and Secret Manager instances will be provided to you via e-mail.
+- The Client will provide you with access credentials to both the Database and Secret Manager instances, via e-mail.
 - All source code must be located under the [source folder](./source/). REST API code shall be put under [back-end](./source/back-end/) and Web Application code (if implemented) under [front-end](./source/front-end/). You are free to structure these folder as you see fit, but know that clarity and order will be taken into account when evaluating the implementation.
 
 ## 3. Database specifications
@@ -267,6 +268,7 @@ To integrate Watson Assistant with an external service that has a REST API, you 
 4. [Call the custom extension](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-call-extension) from one or more actions on your virtual assistant. *Pro tip:* remember to correctly specify the request parameters, and consider storing the result on a variable to be used within the dialog context.
 
 ### 5.4. OpenAPI specification generation
+
 #### 5.4.1. What is OpenAPI?
 
 [OpenAPI Specification](https://swagger.io/docs/specification/about/) (formerly Swagger Specification) is an API description format for REST APIs. An OpenAPI file allows you to describe your entire API, including:
@@ -288,13 +290,14 @@ Find an example for generating an OpenAPI specification into a JSON file using t
 
 Should you wish to write the specification manually, or validate its format, the [Swagger Web Editor](https://editor.swagger.io/) is also a tool to consider.
 
-## 6. Project Delivery
+## 6. Solution Delivery
 
 After the challenge is presented to you, you will receive an e-mail will containing the assets you'll need to complete it. Make sure to [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository and commit all your contributions there.
 
 > **Note:** repository history will be taken into account for evaluation purposes, so make sure to commit often and in a descriptive manner.
 
 You will have **one week** to complete the challenge, starting from the moment the e-mail is sent to you.
+
 ### 6.1. Deliverables
 
 Once you have finished the challenge, or your time has ran out, you must deliver the following assets:
@@ -304,17 +307,18 @@ Once you have finished the challenge, or your time has ran out, you must deliver
    2. Code must be *submitted via GitHub* on the fork you created. You can send a `.zip` copy if you wish via e-mail, but for backup purposes only.
 2. **Showcase video**
    1. Video detailing what the challenge was about, how you implemented it, and what you learned from the experience.
-   2. Duration must be between *two and five minutes*.
+   2. Duration must be between **two and five minutes**. This will be taken into consideration during evaluation.
    3. `.mp4` format is preferred.
-   4. For privacy and security reasons, this video can be *sent via e-mail*, instead of including it in this repository.
+   4. The video **must be in English**, so the client's Technical Leadership can understand it.
+   5. For privacy and security reasons, this video can be *sent via e-mail*, instead of including it in this repository.
 
 ### 6.2. Focal Points
 
 Communication, both for questions and delivery purposes, must be sent to:
 
-- `Gabriela Retamosa`. Senior Build Labs Leader, SSA & MX. [gabyretamosa@uy.ibm.com](mailto:gabyretamosa@uy.ibm.com)
-- `Josefina R. Casanova`. Associate Build Labs Tech Project Lead, SSA + MX. [josefinarcasanova@ibm.com](mailto:josefinarcasanova@ibm.com)
-- `Sebastian Fripp`. Early Build Labs Tech Project Lead, SSA + MX. [sfripp@ibm.com](mailto:sfripp@ibm.com)
+- `Gabriela Retamosa`. Senior Build Lab Leader, SSA & MX. [gabyretamosa@uy.ibm.com](mailto:gabyretamosa@uy.ibm.com)
+- `Josefina R. Casanova`. Associate Build Lab Tech Project Lead, SSA + MX. [josefinarcasanova@ibm.com](mailto:josefinarcasanova@ibm.com)
+- `Sebastian Fripp`. Early Build Lab Tech Project Lead, SSA + MX. [sfripp@ibm.com](mailto:sfripp@ibm.com)
 
 ## References
 
@@ -326,4 +330,4 @@ Communication, both for questions and delivery purposes, must be sent to:
 
 ## Authors
 
-- [Josefina R. Casanova](https://github.com/josefinarcasanova) | IBM Build Labs Tech Project Lead (SSA + MX)
+- [Josefina R. Casanova](https://github.com/josefinarcasanova) | IBM Build Lab Tech Project Lead (SSA + MX)
