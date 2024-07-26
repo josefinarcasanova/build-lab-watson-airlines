@@ -44,7 +44,7 @@ To develop this solution, Watson Airlines is willing to provide access to a data
 
 ### 2.1. Application Architecture
 
-![architecture](./images/architecture.png)
+![architecture](./images/architecture_local.png)
 
 Expected application flow is as follows:
 
