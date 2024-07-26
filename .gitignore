@@ -1,7 +1,3 @@
-# nodejs dependencies
-node_modules/
-# macos files
-.DS_store
-# environment variables
-.env
-.venv
+
+assets/.DS_Store
+.DS_Store
