@@ -264,7 +264,7 @@ Communication, both for questions and delivery purposes, must be sent to:
 - `Gabriela Retamosa`. Senior Leader | Build Lab SSA & MX. [gabyretamosa@uy.ibm.com](mailto:gabyretamosa@uy.ibm.com)
 - `Josefina R. Casanova`. Engagement Lead, Data & AI | Build Lab Americas. [josefinarcasanova@ibm.com](mailto:josefinarcasanova@ibm.com)
 - `Sebastian Fripp`. Associate Engagement Lead, Cloud & Automation | Build Lab Americas. [sfripp@ibm.com](mailto:sfripp@ibm.com)
-- `Nadia dos Santos`. Associate Engagement Lead, Security | Build Lab Americas. [nadoadossantos@ibm.com](mailto:nadoadossantos@ibm.com)
+- `Nadia dos Santos`. Associate Engagement Lead, Security | Build Lab Americas. [nadiadossantos@ibm.com](mailto:nadiadossantos@ibm.com)
 
 ## References
 
